@@ -33,11 +33,11 @@ jobs:
     - name: Create Staging Directory and Copy Build Output
       run: |
         mkdir staging
-        cp -r * staging/
+        cp -r target/* staging/
 
     - name: Upload Build Output Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: Build-Output
+        name: Package
         path: staging
 
